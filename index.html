@@ -44,6 +44,12 @@
             z-index: 2;
         }
 
+        .winter-boba {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+        }
+
         h1 {
             color: #0288d1;
             font-size: 2.5em;
@@ -118,6 +124,15 @@
             font-style: italic;
             color: #666;
         }
+
+        @keyframes steam {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            50% { transform: translateY(-20px) translateX(5px); opacity: 0.8; }
+        }
+
+        .steam {
+            animation: steam 2s infinite ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -140,7 +155,255 @@
     </script>
 
     <div class="container">
-        <div class="boba-emoji">🧋❄️</div>
+        <svg class="winter-boba" viewBox="0 0 200 200">
+            <!-- Snow ground -->
+            <ellipse cx="100" cy="180" rx="80" ry="15" fill="#e3f2fd"/>
+            
+            <!-- Boba cup -->
+            <path d="M60 50 L140 50 L130 170 L70 170 Z" fill="#0288d1"/>
+            <path d="M55 50 L145 50 L140 40 L60 40 Z" fill="#01579b"/>
+            
+            <!-- Steam -->
+            <path class="steam" d="M85 30 Q95 10 105 30" fill="none" stroke="#b3e5fc" stroke-width="3" opacity="0.6"/>
+            <path class="steam" d="M95 25 Q105 5 115 25" fill="none" stroke="#b3e5fc" stroke-width="3" opacity="0.6" style="animation-delay: -1s"/>
+            
+            <!-- Drink -->
+            <path d="M70 60 L130 60 L122 160 L78 160 Z" fill="#b3e5fc"/>
+            
+            <!-- Boba pearls -->
+            <circle cx="85" cy="140" r="6" fill="#333"/>
+            <circle cx="100" cy="145" r="6" fill="#333"/>
+            <circle cx="115" cy="140" r="6" fill="#333"/>
+            <circle cx="90" cy="130" r="6" fill="#333"/>
+            <circle cx="110" cy="130" r="6" fill="#333"/>
+            
+            <!-- Snowflakes -->
+            <path d="M40 80 l10 0 l-5 -8.66 Z" fill="#fff"/>
+            <path d="M150 100 l10 0 l-5 -8.66 Z" fill="#fff"/>
+            <path d="M30 130 l10 0 l-5 -8.66 Z" fill="#fff"/>
+            <path d="M160 60 l10 0 l-5 -8.66 Z" fill="#fff"/>
+        </svg>
+
+        <h1>COLD WEATHER CALLS FOR BOBA, NOT PLUSHIES!</h1>
+        
+        <div class="protest-text">
+            On this chilly winter day, instead of warming our souls with hot boba, we get... a plushie???
+        </div>
+
+        <!-- Rest of the content remains the same -->
+        <div class="boba-comparison">
+            <div class="boba-item">
+                <h2>Winter Boba</h2>
+                <p>✓ Warms your soul</p>
+                <p>✓ Perfect winter drink</p>
+                <p>✓ Better than hot chocolate</p>
+                <p>✓ Brings winter joy</p>
+            </div>
+            <div class="vs">VS</div>
+            <div class="boba-item">
+                <h2>Winter Plushie</h2>
+                <p>✗ Already have a winter coat</p>
+                <p>✗ Can't drink it in the cold</p>
+                <p>✗ Tastes like fabric</p>
+                <p>✗ Makes winter sadder</p>
+            </div>
+        </div>
+
+        <div class="facts">
+            <h2>WINTER FACTS:</h2>
+            <p>• Studies show that hot boba is 127% more effective at warming developers than plushies</p>
+            <p>• Winter coding productivity increases by 583% with real boba*</p>
+            <p>• Polar bears unanimously prefer drinking boba over hugging plushies</p>
+            <small>* Results may vary. Study conducted by the Arctic Institute of Boba Sciences (AIBS)</small>
+        </div>
+
+        <button class="petition" onclick="alert('Thank you for supporting this noble cause! ❄️')">
+            Sign Our Petition for Real Boba! ❄️
+        </button>
+
+        <div class="footer"><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winter Justice for Real Boba!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #e3f2fd;
+            text-align: center;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: absolute;
+            color: #fff;
+            font-size: 1.5em;
+            animation: fall linear forwards;
+            text-shadow: 0px 0px 5px black;
+            z-index: 3;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10vh;
+                transform: translateX(0);
+            }
+            100% {
+                top: 110vh;
+                transform: translateX(25px);
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 149, 255, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .winter-boba {
+            width: 200px;
+            height: 200px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            color: #0288d1;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .boba-comparison {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .boba-item {
+            background: white;
+            padding: 20px;
+            width: 250px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(2, 136, 209, 0.1);
+            border: 2px solid #e3f2fd;
+        }
+
+        .vs {
+            display: flex;
+            align-items: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: #0288d1;
+        }
+
+        .protest-text {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 30px 0;
+        }
+
+        .petition {
+            background: #0288d1;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+            box-shadow: 0 4px 8px rgba(2, 136, 209, 0.2);
+        }
+
+        .petition:hover {
+            transform: scale(1.05);
+            background: #0277bd;
+        }
+
+        .facts {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: left;
+            border: 2px solid #e3f2fd;
+        }
+
+        .boba-emoji {
+            font-size: 3em;
+            margin: 20px 0;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-style: italic;
+            color: #666;
+        }
+
+        @keyframes steam {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            50% { transform: translateY(-20px) translateX(5px); opacity: 0.8; }
+        }
+
+        .steam {
+            animation: steam 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            snowflake.style.opacity = Math.random();
+            document.body.appendChild(snowflake);
+            
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        setInterval(createSnowflake, 300);
+    </script>
+
+    <div class="container">
+        <svg class="winter-boba" viewBox="0 0 200 200">
+            <ellipse cx="100" cy="180" rx="80" ry="15" fill="#e3f2fd"/>
+            
+            <path d="M60 50 L140 50 L130 170 L70 170 Z" fill="#0288d1"/>
+            <path d="M55 50 L145 50 L140 40 L60 40 Z" fill="#01579b"/>
+            
+            <path class="steam" d="M85 30 Q95 10 105 30" fill="none" stroke="#b3e5fc" stroke-width="3" opacity="0.6"/>
+            <path class="steam" d="M95 25 Q105 5 115 25" fill="none" stroke="#b3e5fc" stroke-width="3" opacity="0.6" style="animation-delay: -1s"/>
+            
+            <path d="M70 60 L130 60 L122 160 L78 160 Z" fill="#b3e5fc"/>
+            
+            <circle cx="85" cy="140" r="6" fill="#333"/>
+            <circle cx="100" cy="145" r="6" fill="#333"/>
+            <circle cx="115" cy="140" r="6" fill="#333"/>
+            <circle cx="90" cy="130" r="6" fill="#333"/>
+            <circle cx="110" cy="130" r="6" fill="#333"/>
+            
+            <path d="M40 80 l10 0 l-5 -8.66 Z" fill="#fff"/>
+            <path d="M150 100 l10 0 l-5 -8.66 Z" fill="#fff"/>
+            <path d="M30 130 l10 0 l-5 -8.66 Z" fill="#fff"/>
+            <path d="M160 60 l10 0 l-5 -8.66 Z" fill="#fff"/>
+        </svg>
+
         <h1>COLD WEATHER CALLS FOR BOBA, NOT PLUSHIES!</h1>
         
         <div class="protest-text">
@@ -178,6 +441,12 @@
         </button>
 
         <div class="footer">
+            <p>This website was made under protest while shivering without hot boba.</p>
+            <p>No plushies were left out in the cold during the making of this website.</p>
+        </div>
+    </div>
+</body>
+</html>
             <p>This website was made under protest while shivering without hot boba.</p>
             <p>No plushies were left out in the cold during the making of this website.</p>
         </div>
